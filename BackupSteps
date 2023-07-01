@@ -10,3 +10,6 @@ Passo a passo para se fazer um backup no PostgresSQL:
 
 Pronto! C:
 Após a execução dos passos acima, finalizado o processo e dado o REFRESH no banco deverá aparecer no Schemas.
+
+(2) Modelagem Lógica do banco de dados importado acima;
+
