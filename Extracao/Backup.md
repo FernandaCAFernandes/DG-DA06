@@ -1,5 +1,6 @@
-
 EXTRAÇÃO:
+
+
 (1) Importação do dump/backup para um banco de dados Relacional (SQL);
 Passo a passo para se fazer um backup no PostgresSQL:
   1 - Criar o database que irar receber o backup
