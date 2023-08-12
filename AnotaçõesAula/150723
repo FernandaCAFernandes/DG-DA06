@@ -1,0 +1,79 @@
+15/07/23
+Unidade 2 - EXTRAÇÃO, TRANSFORMAÇÃO E CARGA (ETL)	
+
+
+Módulo 1 - Processo de descoberta de conhecimento
+
+Ler a apostila, dica seria começar a ler de trás para frente.
+
+A sigla KDD é  Knowledge Discovery in Databases.Esse processo envolve seleção, pré-processamento, transformação e mineração de dados. Essa técnica auxilia no processo de extração e descobertas de informações valiosas em grandes volumes de dados. 
+As etapas do KDD são:
+Seleção de dados: Pegar a fonte de dados com a qual se deseja trabalhar. Pode-se utilizar os dados parciais, uma amostra ou o dado completo. 
+Pré-processamento: Tratamento que será realizado em cima do dado, como limpeza dos dados, transformações (alterações na formatação das colunas) e enriquecimento e redução de dados, que seria a retirada em si dos dados. 
+Obs: Quando há muitos nulos, uma opção é utilizar machine learning para realizar previsões do que poderiam ser valores adequados para realizar o tratamento e preenchimento de nulos. 
+Transformação: Muito utilizado na parte de machine learning, são feitas as operações de normalização, discretização, agregação e redução dos dados.
+Mineração de dados: Visualização de dados, árvores de decisão, clusterização.
+Avaliação de padrões: Localizar e selecionar padrões, verificar a validade dos padrões encontrados, e finalmente, a compreensão dos significados e inferências dos padrões encontrados. 
+Obs: Para esse curso, as etapas que são de vital importância são a etapa de seleção, o pré-processamento e a transformação. Com foco nas duas primeiras etapas mencionadas. 
+
+CRISP-DM significa Cross Industry Standard Process for Data Mining, e é uma
+metodologia de mineração de dados. Ambos são modelos de mineração de dados, porém ressalta-se que o CRISP-DM é mais utilizado do que o KDD.
+O CRISP-DM parece ser similar a ideia do SCRUM, no qual as etapas das atividades são bem divididas e o foco é em fazer entregas pequenas ao longo do período de duração da atividade com o intuito de sempre buscar feedback para que a entrega final esteja de acordo com o que é desejado pelo cliente/usuário. No CRISP-DM nas fases de Data Understanding, Data Preparation e Modeling é onde encontra-se o ETL. 
+
+Existe o ETL e também o ELT. No caso ambos representam o mesmo processo, porém a fase que diz respeito ao loading acontece em etapas diferentes. No caso do ETL, o loading acontece após toda a fase da transformação ter acontecido e ser finalizada, enquanto isso no ELT a fase de loading irá acontecer antes da fase de transformação. 
+Obs: ETL normalmente é utilizado pelo cientista, enquanto o ELT é normalmente utilizado pelo analista.
+
+
+
+
+Anexo 🦊:
+Data Lakes é um repositório centralizado projetado para armazenar, processar e proteger grandes quantidades de dados estruturados, semiestruturados e não estruturados. Ele pode armazenar dados em seu formato nativo e processar qualquer variedade desses dados, ignorando os limites de tamanho. Ou seja, ele recebe uma grande quantidade de dados das mais diversas fontes. 
+O Data Lake possui três camadas distintas, sendo elas:]
+A camada Bronze, a camada que irá receber todos os dados que farão parte do Data Lake. 
+A camada Prata, essa camada recebe os dados que estão na camada Bronze, porém apenas quando os dados já estão pré-processados. 
+A camada Ouro irá conter os dados já tratados que basicamente estão preparados para que seja gerado visualizações com os mesmos.  
+Obs: Em alguns casos o DW é criado ou na camada Prata ou na Ouro, cria-se dentro do Data Lake, no geral, para manter os dados centralizados, porém também acontece de na prática empresas montarem o DW totalmente fora do Data Lake.
+
+🏠 Atividade de 8/07 para 15/07 
+
+SQL (Structured Query Language) e NoSQL (Not Only SQL) são duas abordagens diferentes de armazenamento e manipulação de dados em bancos de dados. O SQL foi desenvolvido na década de 1970 pelos pesquisadores da IBM Donald D. Chamberlin e Raymond F. Boyce, e  foi projetado para ser uma linguagem padrão de consulta para bancos de dados relacionais, que representam os dados em tabelas com linhas e colunas. Seu principal objetivo era fornecer uma maneira declarativa e eficiente de recuperar, inserir, atualizar e excluir dados.
+O SQL  apresenta algumas vantagens, sendo elas: 
+Estrutura bem definida: O modelo relacional permite que os dados sejam organizados em tabelas com relacionamentos bem definidos, garantindo integridade referencial e consistência.
+Suporte ACID: Os bancos de dados relacionais seguem o conceito ACID (Atomicidade, Consistência, Isolamento, Durabilidade), garantindo a segurança e a confiabilidade das transações.
+Maturidade e comunidade: O SQL tem sido amplamente utilizado há décadas, resultando em uma comunidade bem estabelecida, muitas ferramentas e uma grande quantidade de documentação disponível.
+
+Enquanto isso, em relação à desvantagens, podemos citar: 
+Escalabilidade horizontal limitada: O modelo relacional tradicional pode enfrentar desafios ao lidar com grandes volumes de dados e escalabilidade horizontal em ambientes distribuídos.
+Esquema rígido: O esquema de banco de dados relacional é inflexível, exigindo modificações cuidadosas quando há mudanças nos requisitos de dados.
+
+O termo NoSQL foi criado no final dos anos 90, mas o movimento NoSQL ganhou impulso em meados de 2009. Adicionalmente, o NoSQL foi criado para atender aos desafios enfrentados pelos bancos de dados relacionais em relação à escalabilidade, flexibilidade de esquema e capacidade de lidar com dados não estruturados ou semiestruturados.
+Os bancos de dados que se utilizam de NoSQL podem ser subdivididos em diversos tipos, sendo eles:
+Armazenamento de Documentos: Esses bancos armazenam dados em formatos JSON, BSON ou similares, onde cada registro (documento) pode ter uma estrutura diferente. Exemplos incluem MongoDB e Couchbase.
+Armazenamento Chave-Valor: Esses bancos armazenam dados como pares de chave-valor, onde a chave é um identificador único e o valor é o dado associado. Exemplos incluem Redis e Amazon DynamoDB
+Armazenamento de Família de Colunas: Também conhecidos como Wide-Column Stores, esses bancos de dados organizam os dados em famílias de colunas ou famílias de colunas com linhas. Cada linha pode ter colunas diferentes, e cada coluna contém várias versões do dado. Exemplos incluem Apache Cassandra e HBase.
+Bancos de Dados de Grafos: Esses bancos de dados são projetados para armazenar e representar dados na forma de um grafo, composto por nós (vértices) e arestas (relacionamentos). São úteis para estruturas de dados complexas e dados com muitos relacionamentos. Exemplos incluem Neo4j e Amazon Neptune.
+Bancos de Dados de Séries Temporais: Esses bancos de dados são otimizados para lidar com dados de séries temporais, como leituras de sensores, dados financeiros e registros de servidores. Exemplos incluem InfluxDB e Prometheus.
+Bancos de Dados de Objetos: Esses bancos armazenam dados na forma de objetos, semelhante ao que ocorre em linguagens de programação orientadas a objetos. São úteis para aplicativos que utilizam fortemente paradigmas orientados a objetos. Exemplos incluem ZopeDB e ObjectDB.
+Bancos de Dados XML: Esses bancos de dados são projetados para armazenar e consultar dados XML. São úteis para aplicativos que dependem fortemente de formatos de dados XML. Exemplos incluem BaseX e eXist-db.
+(Bancos de Dados Colunares: Esses bancos de dados armazenam dados em colunas em vez de linhas, o que pode levar a melhor compressão e desempenho de consulta mais rápido para determinadas cargas de trabalho. Exemplos incluem Apache Parquet e ClickHouse.
+Bancos de Dados NewSQL: Embora não sejam estritamente NoSQL, os bancos de dados NewSQL têm como objetivo combinar as melhores características dos bancos de dados SQL tradicionais com a escalabilidade e flexibilidade dos bancos de dados NoSQL. Exemplos incluem CockroachDB e TiDB.
+
+De maneira geral, podemos elencar as vantagens do NoSQL como sendo:
+Escalabilidade horizontal: Os bancos de dados NoSQL, como o Cassandra e o MongoDB, são projetados para escalabilidade horizontal e podem lidar com grandes quantidades de dados distribuídos em vários servidores.
+Esquema flexível: NoSQL permite que os dados sejam armazenados sem um esquema rígido, o que facilita mudanças nos requisitos de dados e o armazenamento de dados não estruturados.
+Alta velocidade: Alguns bancos de dados NoSQL são otimizados para consultas e operações de leitura/gravação rápidas, ideais para aplicativos com alto volume de acesso a dados.
+
+Enquanto isso suas desvantagens são: 
+Consistência eventual: Alguns sistemas NoSQL priorizam a disponibilidade e a escalabilidade em detrimento da consistência imediata dos dados, o que pode levar a algumas inconsistências temporárias.
+Falta de padrões e ferramentas consolidadas: O movimento NoSQL é relativamente novo em comparação com o SQL, e, como resultado, pode haver uma variedade de opções, mas nem todas têm ferramentas e padrões consolidados.
+
+Apesar de suas diferenças, com vantagens e desvantagens distintas, no que diz respeito à qual tipo de database deve ser utilizado varia para cada caso de uso. No caso do SQL, sua utilização é mais adequada para, por exemplo aplicações com requisitos de transações complexas e consistentes, como sistemas financeiros, situações em que o esquema dos dados é estável e bem definido desde o início ou mesmo aplicações que exigem recursos de ACID para garantir a integridade dos dados.
+Enquanto, o NoSQL também se prova como sendo a melhor escolha em situações como quando à aplicações com necessidades de escalabilidade horizontal e distribuição de dados, ou situações em que a flexibilidade do esquema é importante devido à natureza evolutiva dos dados, ou até mesmo quando aplicações com alto volume de leitura/gravação, como aplicativos web e móveis.
+
+
+
+🏠 Atividade de 15/07 para 22/07 
+Desenhar qual seria a arquitetura ideal para o nosso DB, levando em consideração o DW.
+Qual seria a arquitetura ideal para o nosso DB? Qual a melhor solução?
+Obs: Dica seria ter duas máquinas diferentes com o DB (Ambos postgresql ou diferentes DB SQL), além disso, poderíamos ter o DB em si e o DW em máquinas diferentes também, sendo o DW em particular jogado para cloud.  
+
